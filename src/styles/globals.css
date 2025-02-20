@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --menubar-size: 80px;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+.main-content {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  background-color: #191918;
+  @apply text-gray-200;
+}
+
+.menubar {
+  width: var(--menubar-size);
+  min-height: 100vh;
+  height: 100%;
+}
+
+.content {
+  width: calc(var(--menubar-size) - 100%);
+  min-height: 100vh;
+  height: 100%;
+  flex: 1;
+}
